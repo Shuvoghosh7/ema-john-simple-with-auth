@@ -5,8 +5,6 @@ import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
 
 
-
-
 const Orders = () => {
     const[product,setProduct]=useProducts()
     const [cart,setCart]=useCart(product)
