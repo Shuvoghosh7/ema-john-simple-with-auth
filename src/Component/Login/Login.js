@@ -19,7 +19,7 @@ const Login = () => {
                     <input className='form-submit' type="submit" value="Login" />
                 </form>
                 <p>
-                    New to ema-josh? <Link className='form-link' to='/singin'>Create an Acount</Link>
+                    New to ema-josh? <Link className='form-link' to='/singup'>Create an Acount</Link>
                 </p>
             <div className='line'>
                 <div className='hr'><hr /></div>
