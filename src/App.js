@@ -3,8 +3,10 @@ import './App.css';
 import About from './Component/About/About';
 import Header from './Component/Header/Header';
 import Inventory from './Component/Inventory/Inventory';
+import Login from './Component/Login/Login';
 import Orders from './Component/Orders/Orders';
 import Shop from './Component/Shop/Shop';
+import Singin from './Component/Singin/Singin';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path='/orders' element={<Orders/>}></Route>
         <Route path='/inventory' element={<Inventory/>}></Route>
         <Route path='/about' element={<About/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/singin' element={<Singin/>}></Route>
       </Routes>
       
     </div>
