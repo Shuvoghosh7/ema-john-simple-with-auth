@@ -17,6 +17,7 @@ const ReviewItem = ({product,handleRemoveProduct}) => {
                        </p>
                    <p> <span className='orange-color'>{price}</span></p>
                    <p><small>Shipping Charge:${shipping}</small></p>
+                   <p><small>Quantity:{quantity}</small></p>
                    
                 </div>
                 <div className="delete-container">

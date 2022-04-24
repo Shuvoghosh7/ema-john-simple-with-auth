@@ -9,32 +9,32 @@ import './Orders.css'
 
 
 const Orders = () => {
-    const[product,setProduct]=useProducts()
-    const [cart,setCart]=useCart(product)
+    const [product, setProduct] = useProducts()
+    const [cart, setCart] = useCart(product)
     const navigate = useNavigate();
-    const handleRemoveProduct = product =>{
-        const rest = cart.filter(pd => pd.id !== product.id);
+    const handleRemoveProduct = product => {
+        const rest = cart.filter(pd => pd._id !== product._id);
         setCart(rest);
-        removeFromDb(product.id);
+        removeFromDb(product._id);
     }
     return (
-      <div className="shop-container">
-          <div className="review-items-container">
-              {
-                  cart.map(product => <ReviewItem
-                  key={product.id}
-                  product={product}
-                  handleRemoveProduct={handleRemoveProduct}
-                  />)
-              }
+        <div className="shop-container">
+            <div className="review-items-container">
+                {
+                    cart.map(product => <ReviewItem
+                        key={product._id}
+                        product={product}
+                        handleRemoveProduct={handleRemoveProduct}
+                    />)
+                }
 
-          </div>
-          <div className="cart-contaoiner">
-              <Cart cart={cart}>
-              <button onClick={()=>navigate('/shipment')}>Proceed Checkout </button>
-              </Cart>
-          </div>
-      </div>
+            </div>
+            <div className="cart-contaoiner">
+                <Cart cart={cart}>
+                    <button onClick={() => navigate('/shipment')}>Proceed Checkout </button>
+                </Cart>
+            </div>
+        </div>
     );
 };
 
